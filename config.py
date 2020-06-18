@@ -8,6 +8,6 @@ DEBUG = True
 
 # Connect to the database
 
+SQLALCHEMY_DATABASE_URI = 'postgresql://armanyadalmia:armanyadalmia@localhost:5433/fyyur'
 
-# TODO IMPLEMENT DATABASE URL
-SQLALCHEMY_DATABASE_URI = '<Put your local database url>'
+# SQLALCHEMY_TRACK_MODIFICATIONS = False
