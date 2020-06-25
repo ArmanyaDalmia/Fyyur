@@ -16,6 +16,7 @@ class ShowForm(Form):
         default= datetime.today()
     )
 
+
 class VenueForm(Form):
     name = StringField(
         'name', validators=[DataRequired()]
@@ -120,9 +121,8 @@ class VenueForm(Form):
         'website', validators=[URL()]
     )
     seeking_talent = BooleanField('seeking_talent')
-    seeking_description = StringField(
-        'seeking_description'
-    )
+    seeking_description = StringField('seeking_description')
+
 
 class ArtistForm(Form):
     name = StringField(
@@ -223,5 +223,10 @@ class ArtistForm(Form):
         # TODO implement enum restriction
         'facebook_link', validators=[URL()]
     )
+    website = StringField(
+        'website', validators=[URL()]
+    )
+    seeking_venue = BooleanField('seeking_venue')
+    seeking_description = StringField('seeking_description')
 
 # (Completed) TODO IMPLEMENT NEW ARTIST FORM AND NEW SHOW FORM
