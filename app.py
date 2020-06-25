@@ -63,6 +63,7 @@ class Artist(db.Model):
     image_link = db.Column(db.String(500))
     genres = db.Column(db.ARRAY(db.String), nullable = False)
     facebook_link = db.Column(db.String(120))
+    website = db.Column(db.String(250))
     seeking_venue = db.Column(db.Boolean, default=False)
     seeking_description = db.Column(db.String(250))
     shows = db.relationship('Show', backref='artist', lazy=True)
@@ -610,15 +611,14 @@ def create_show_submission():
   # on successful db insert, flash success
   # e.g., flash('An error occurred. Show could not be listed.')
   # see: http://flask.pocoo.org/docs/1.0/patterns/flashing/
-  
   error = False
 
   try:
     form = ShowForm()
     new_show = Show(
-      venue_id=form.venue_id,
-      artist_id=form.artist_id,
-      start_time=form.start_time
+      venue_id=form.venue_id.data,
+      artist_id=form.artist_id.data,
+      start_time=form.start_time.data
     )
     db.session.add(new_show)
     db.session.commit()
