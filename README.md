@@ -1,5 +1,4 @@
 # Fyyur
------
 
 ## Introduction
 
@@ -57,7 +56,7 @@ To start and run the local development server,
 
 ## Authors
 
-I primarily worked in the backend folder in the `__init__.py`, `test_flaskr.py`, and `models.py` files in order to create the API and the test suite. This README was also written by me. All other project files including the frontend were provided by Udacity as a project in the Full Stack Web Developer Nanodegree course. 
+I primarily worked on the `app.py`, `config.py`, and `forms.py` files in order to build the data models and API endpoints used by the web app. I also worked on the files in the `forms` subdirectory in the `templates` directory and on this README based off of the provided material. All other project files including the frontend were provided by Udacity as a project in the Full Stack Web Developer Nanodegree course. 
 
 ## Acknowledgements
 
